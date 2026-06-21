@@ -1,154 +1,367 @@
-<!DOCTYPE html>
-<html lang="id">
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Toko Elektronik</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Udhiyah</title>
+    <!-- Font Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<style>
-body{
-    background-color:#f5f7fa;
+  <style>
+    html {
+  scroll-behavior: smooth;
 }
 
-.header{
-    background: linear-gradient(to right,#4facfe,#00c6ff);
-    color:white;
-    text-align:center;
-    padding:25px;
+body {
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8faf8;
 }
 
-.form-card{
-    max-width:700px;
-    margin:auto;
-    margin-top:30px;
-    border-radius:15px;
-    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+/* Navbar */
+.navbar {
+  background: rgba(58, 90, 64, 0.95) !important;
+  backdrop-filter: blur(10px);
 }
 
-.hasil-card{
-    max-width:700px;
-    margin:auto;
-    margin-top:20px;
-    border-radius:15px;
-    background:#f8f9fa;
-    display:none;
+/* Jumbotron */
+.jumbotron {
+  padding-top: 7rem;
+  background: linear-gradient(
+    135deg,
+    #f5f7f2,
+    #d8f3dc,
+    #b7e4c7
+  );
 }
-</style>
+
+.jumbotron img {
+  border: 5px solid white;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+.jumbotron h1 {
+  font-weight: 700;
+}
+
+.jumbotron .lead {
+  color: #555;
+}
+
+/* About */
+#about {
+  background: white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+#about h2,
+#Projects h2,
+#Contact h2 {
+  font-weight: 700;
+  color: #2d4731;
+}
+
+/* Projects */
+#Projects {
+  background-color: #d8f3dc;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
+
+/* Card */
+.card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: .4s;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,.15);
+}
+
+.card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-title {
+  color: #2d4731;
+  font-weight: 600;
+}
+
+/* Contact */
+#Contact {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  background-color: white;
+}
+
+.form-control {
+  border-radius: 12px;
+}
+
+.btn-primary {
+  background-color: #3a5a40;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #2d4731;
+}
+
+/* Footer */
+footer {
+  background-color: #3a5a40;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #d8f3dc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  color: white;
+}
+  </style>
 </head>
 
 <body>
 
-<div class="header">
-    <h2>Selamat Datang di Toko Elektronik</h2>
-    <p>Belanja lebih mudah dengan perhitungan otomatis</p>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Udhiyah</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active" href="#">Home</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#Projects">Projects</a>
+          <a class="nav-link" href="#Contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Jumbotron -->
+  <section class="jumbotron text-center">
+    <img src="img/Udhiyah.jpg"
+      alt="Profile"
+      width="180"
+      class="rounded-circle img-thumbnail">
+
+    <h1 class="display-4 mt-3">Udhiyah</h1>
+
+    <p class="lead">
+      Mahasiswa Sistem Informasi Universitas Pamulang
+    </p>
+    <div class="mt-4">
+  <a href="#Projects" class="btn btn-primary me-2">
+    Lihat Project
+  </a>
+
+  <a href="#Contact" class="btn btn-outline-dark">
+    Hubungi Saya
+  </a>
 </div>
 
-<div class="container">
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320">
+      <path fill="#ffffff" fill-opacity="1"
+        d="M0,224L48,186.7C96,149,192,75,288,74.7C384,75,480,149,576,149.3C672,149,768,75,864,80C960,85,1056,171,1152,192C1248,213,1344,171,1392,149.3L1440,128L1440,320L0,320Z">
+      </path>
+    </svg>
+  </section>
 
-    <div class="card form-card p-4">
-        <h3 class="text-center mb-4">Form Transaksi</h3>
-
-        <div class="mb-3">
-            <label>Nama Pelanggan</label>
-            <input type="text" id="nama" class="form-control">
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="row text-center mb-3">
+        <div class="col">
+          <h2>About Me</h2>
         </div>
+      </div>
 
-        <div class="mb-3">
-            <label>Nama Produk</label>
-            <input type="text" id="produk" class="form-control">
+      <div class="row justify-content-center fs-5 text-center">
+        <div class="col-md-6 mx-auto">
+          <p>
+            Saya adalah mahasiswa Sistem Informasi Universitas Pamulang
+            yang memiliki minat dalam bidang pengembangan website,
+            desain antarmuka pengguna (UI/UX), dan teknologi informasi.
+            Saya senang mempelajari hal-hal baru serta mengembangkan
+            keterampilan melalui berbagai proyek yang saya kerjakan.
+          </p>
         </div>
-
-        <div class="mb-3">
-            <label>Harga Produk</label>
-            <input type="number" id="harga" class="form-control">
-        </div>
-
-        <div class="mb-3">
-            <label>Jumlah Pembelian</label>
-            <input type="number" id="jumlah" class="form-control">
-        </div>
-
-        <button class="btn btn-success" onclick="hitung()">
-            Hitung
-        </button>
-
-        <button class="btn btn-danger" onclick="resetForm()">
-            Reset
-        </button>
+      </div>
     </div>
 
-    <div class="card hasil-card p-4" id="hasil">
-        <h3>Hasil Perhitungan</h3>
+   
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320">
+      <path fill="#d8f3dc" fill-opacity="1"
+        d="M0,96L60,90.7C120,85,240,75,360,96C480,117,600,171,720,176C840,181,960,139,1080,128C1200,117,1320,139,1380,149.3L1440,160L1440,320L0,320Z">
+      </path>
+    </svg>
+  </section>
+  
+  <!--Projects -->
+  <section id="Projects">
+    <div class="container">
 
-        <p><b>Nama Pelanggan :</b> <span id="hasilNama"></span></p>
+      <div class="row text-center mb-4 mt-5">
+        <div class="col">
+          <h2>Projects</h2>
+        </div>
+      </div>
 
-        <p><b>Nama Produk :</b> <span id="hasilProduk"></span></p>
+      <div class="row">
 
-        <p><b>Total Belanja :</b> <span id="totalBelanja"></span></p>
+        <!-- Project 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="img/Aplikasi-Smart-Reminder.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Smart Reminder Islami</h5>
+              <p class="card-text">
+                Aplikasi mobile berbasis Flutter untuk membantu
+                pengguna menjalankan ibadah sehari-hari.
+              </p>
+            </div>
+          </div>
+        </div>
 
-        <p><b>Potongan :</b> <span id="potongan"></span></p>
+        <!-- Project 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="img/webPortofolio.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Web Portofolio</h5>
+              <p class="card-text">
+                Website portofolio menggunakan HTML, CSS,
+                dan Bootstrap untuk menampilkan profil pribadi.
+              </p>
+            </div>
+          </div>
+        </div>
 
-        <p><b>Total Bayar :</b> <span id="totalBayar"></span></p>
+        <!-- Project 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="img/Perpustakaan.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Sistem Perpustakaan</h5>
+              <p class="card-text">
+                Sistem informasi perpustakaan untuk pengelolaan buku,
+                anggota, peminjaman, dan pengembalian.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="img/SistemAbsensi.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Sistem Absensi Mahasiswa</h5>
+              <p class="card-text">
+                Sistem berbasis web untuk mengelola data kehadiran
+                mahasiswa secara terstruktur.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="img/formregistrasi.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Form Registrasi</h5>
+              <p class="card-text">
+                Form registrasi responsif menggunakan HTML dan CSS
+                dengan berbagai jenis input data.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="img/Project-Canva.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Project Canva</h5>
+              <p class="card-text">
+                Desain poster dan media promosi menggunakan Canva
+                dengan fokus pada visual yang menarik.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-
+  </section>
+  <!--End Projects-->
+  <!-- Contact -->
+  <section id="Contact">
+    <div class="container">
+      <div class="row text-center mb-3 mt-5">
+        <div class="col">
+          <h2>Contact me</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+      <form>
+  <div class="mb-3">
+    <label for="exampleInput Nama Lengkap" class="form-label">Nama Lengkap</label>
+    <input type="text" class="form-control" id="exampleInput Nama Lengkap">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Email</label>
+    <input type="email" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+  <label for="Pesan" class="form-label">Pesan</label>
+  <textarea class="form-control" id="Pesan" rows="3"></textarea>
 </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>     
+        </div>
+      </div>
+    </div>
 
-<script>
+     <!-- End Contact -->
 
-function formatRupiah(angka){
-    return "Rp " + angka.toLocaleString("id-ID");
-}
+     <!-- Footer-->
+      <footer>
+        <p> Created with love by <a href="https://www.instagram.com/uuudhii?igsh=YXF6eXZ1N2N3dDd6" target="_blank" class="text-white">UUUDHII</a></p>
+      </footer>
 
-function hitung(){
-
-    let nama = document.getElementById("nama").value;
-    let produk = document.getElementById("produk").value;
-    let harga = parseInt(document.getElementById("harga").value);
-    let jumlah = parseInt(document.getElementById("jumlah").value);
-
-    if(nama=="" || produk=="" || isNaN(harga) || isNaN(jumlah)){
-        alert("Semua input wajib diisi!");
-        return;
-    }
-
-    let totalBelanja = harga * jumlah;
-
-    let potongan = 0;
-
-    if(totalBelanja >= 400000){
-        potongan = 50000;
-    }
-
-    let totalBayar = totalBelanja - potongan;
-
-    document.getElementById("hasilNama").innerHTML = nama;
-    document.getElementById("hasilProduk").innerHTML = produk;
-
-    document.getElementById("totalBelanja").innerHTML =
-        formatRupiah(totalBelanja);
-
-    document.getElementById("potongan").innerHTML =
-        formatRupiah(potongan);
-
-    document.getElementById("totalBayar").innerHTML =
-        formatRupiah(totalBayar);
-
-    document.getElementById("hasil").style.display = "block";
-}
-
-function resetForm(){
-
-    document.getElementById("nama").value = "";
-    document.getElementById("produk").value = "";
-    document.getElementById("harga").value = "";
-    document.getElementById("jumlah").value = "";
-
-    document.getElementById("hasil").style.display = "none";
-}
-
-</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
